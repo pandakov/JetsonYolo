@@ -10,6 +10,7 @@
 
 import numpy as np
 import cv2
+import pickle
 
 # top left, top right, bottom left, bottom right
 pts = [(0,0),(0,0),(0,0),(0,0)]
@@ -78,6 +79,8 @@ while(1):
 
 			key = cv2.waitKey(10) & 0xFF
 			if key == 27:
+			        with open('warp_matrix.pickle', 'wb') as f:
+					pickle.dump(M, f)
 				break
 	else:
 		print "Exit"
