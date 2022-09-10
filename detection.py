@@ -62,8 +62,6 @@ if cap.isOpened():
                     # warped_coords = warp_coords(center_coords, warp_matrix)
                     push_coords(center_coords, s)
                     # push_coords(warped_coords)
-                else:
-                    None
-        cap.release()
 else:
+    cap.release()
     print("Unable to open camera")
